@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Mconnect_Productribbon>
+            <version>0.1.2</version>
+        </Mconnect_Productribbon>
+    </modules>
+    <frontend>
+        <routers>
+            <productribbon>
+                <use>standard</use>
+                <args>
+                    <module>Mconnect_Productribbon</module>
+                    <frontName>productribbon</frontName>
+                </args>
+            </productribbon>
+        </routers>
+        <layout>
+            <updates>
+                <productribbon>
+                    <file>productribbon.xml</file>
+                </productribbon>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+       <!-- <menu>
+            <productribbon module="productribbon">
+                <title>Productribbon</title>
+                <sort_order>71</sort_order>               
+                <children>
+                    <items module="productribbon">
+                        <title>Manage Items</title>
+                        <sort_order>0</sort_order>
+                        <action>productribbon/adminhtml_productribbon</action>
+                    </items>
+                </children>
+            </productribbon>
+        </menu>-->
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <Mconnect_Productribbon>
+                            <title>Productribbon Module</title>
+                            <sort_order>10</sort_order>
+                        </Mconnect_Productribbon>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <productribbon translate="title" module="productribbon"> 
+                                            <title>productribbon Section</title>
+                                        </productribbon>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <layout>
+            <updates>
+                <productribbon>
+                    <file>productribbon.xml</file>
+                </productribbon>
+            </updates>
+        </layout>
+    </adminhtml>   
+
+    <admin>
+        <routers>
+            <productribbon>
+                <use>admin</use>
+                <args>
+                    <module>Mconnect_Productribbon</module>
+                    <frontName>productribbon</frontName>
+                </args>
+            </productribbon>
+        </routers>
+    </admin>
+    
+    <global>
+        <models>
+            <productribbon>
+                <class>Mconnect_Productribbon_Model</class>
+                <resourceModel>productribbon_mysql4</resourceModel>
+            </productribbon>
+            <productribbon_mysql4>
+                <class>Mconnect_Productribbon_Model_Mysql4</class>
+                <entities>
+                    <productribbon>
+                        <table>productribbon</table>
+                    </productribbon>
+                    <productribbonbest>
+                        <table>productribbonbest</table>
+                    </productribbonbest>
+                     <productribbonrivewed>
+                        <table>productribbonrivewed</table>
+                    </productribbonrivewed>
+                </entities>
+            </productribbon_mysql4>
+        </models>
+        <resources>
+            <productribbon_setup>
+                <setup>
+                    <module>Mconnect_Productribbon</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </productribbon_setup>
+            <productribbon_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </productribbon_write>
+            <productribbon_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </productribbon_read>
+        </resources>
+        <blocks>
+            <productribbon>
+                <class>Mconnect_Productribbon_Block</class>
+            </productribbon>
+            <catalog>
+                <rewrite>
+                    <product_list>Mconnect_Productribbon_Block_Product_List</product_list>
+                </rewrite>
+
+            </catalog>
+        </blocks>
+        <helpers>
+            <productribbon>
+                <class>Mconnect_Productribbon_Helper</class>
+            </productribbon>
+        </helpers>
+    </global>
+</config>

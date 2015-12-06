@@ -1,0 +1,456 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright  Copyright (c) 2011 Capacity Web Solutions Pvt. Ltd  (http://www.capacitywebsolutions.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+	<tabs>
+        <mconnect_general>            
+            <label>M-Connect Media Extensions</label>
+            <sort_order>198</sort_order>            
+        </mconnect_general>            
+    </tabs>
+    <sections>
+       <productribbon translate="label">
+            
+            <label>Product Ribbon Configuration</label>
+            <tab>mconnect_general</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>300</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <mconnectgeneral translate="label">
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+			 <module_enable_disable translate="label">
+				<label>Enable/Disable</label>
+				<comment>Enable Module</comment>
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+				<frontend_type>select</frontend_type>
+				<sort_order>0</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>
+			</module_enable_disable>
+                        
+                         <display_product_label_on_view>                                
+                                <label>Display On Product View</label>
+				<comment>Show ribbon on product view page</comment>
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+				<frontend_type>select</frontend_type>
+				<sort_order>1</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>                             
+                         </display_product_label_on_view>
+									   
+                    </fields>
+                </mconnectgeneral>
+                
+                <mconnectnewproductarrival translate="label">
+                    <label>New Arrival Products</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>101</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <new_products_module_enable_disable translate="label">
+				<label>Enable/Disable</label>
+				<comment>Dispaly Ribbon on New Arrival Product</comment>
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+				<frontend_type>select</frontend_type>
+				<sort_order>4</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>
+			</new_products_module_enable_disable>
+                        
+                        <new_products_ribbon translate="label comment">
+                                <label>Icon For New Arrival Products</label>
+                                <comment>Allowed file types: jpeg, gif, png ,jpg.</comment>
+                                <frontend_type>image</frontend_type>
+                                <backend_model>adminhtml/system_config_backend_image</backend_model>
+                                <upload_dir config="system/filesystem/media" scope_info="1">m-connectRibbon</upload_dir>
+                                <base_url type="media" scope_info="1">m-connectRibbon</base_url>
+                                <sort_order>5</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                        </new_products_ribbon>
+                        
+                        <position_new_product>
+                                <label>Position</label>
+				<comment>position of product ribbon</comment>
+				<source_model>productribbon/ribbonposition</source_model>
+				<frontend_type>select</frontend_type>
+				<sort_order>6</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>   
+                        </position_new_product>
+                        
+                        <style_for_logo_new_Ribbon translate="label comment">
+                                <label>Style For Ribbon on Catalog List</label>
+                                <comment>Ex:float:left;margin:10px</comment>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>7</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                        </style_for_logo_new_Ribbon>
+                        
+                        <style_for_logo_new_Ribbon_view translate="label comment">
+                                <label>Style For Ribbon on Product View Page</label>
+                                <comment>Ex:float:left;margin:10px</comment>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>8</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                        </style_for_logo_new_Ribbon_view>
+                  
+                       <number_for_display_ribbon_new_product translate="label comment">
+                                <label>Display Ribbon For No. of Product</label>
+                                <comment>In how many products you want to display Ribbon</comment>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>9</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                       </number_for_display_ribbon_new_product>
+                       
+                       <number_for_display_ribbon_new translate="label comment">
+                                <label>Display Ribbon For No. of Days</label>
+                                <comment>For how many days you want to display Ribbon</comment>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>10</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                       </number_for_display_ribbon_new>
+                       
+                       <display_on_new_product_label_on_view>                                
+                                <label>Display On Product View</label>
+				<comment>Show ribbon on product view page</comment>
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+				<frontend_type>select</frontend_type>
+				<sort_order>11</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>                             
+                       </display_on_new_product_label_on_view>
+                 
+                    </fields>
+                </mconnectnewproductarrival>
+                
+                <mconnectbestproduct translate="label">
+                    <label>Best Seller Products</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>102</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <best_products_module_enable_disable translate="label">
+				<label>Enable/Disable</label>
+				<comment>Display Ribbon on best seller product</comment>
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+				<frontend_type>select</frontend_type>
+				<sort_order>12</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>
+			</best_products_module_enable_disable>
+                        
+                        <best_products_ribbon translate="label comment">
+                                <label>Icon For Best Seller Products</label>
+                                <comment>Allowed file types: jpeg, gif, png ,jpg.</comment>
+                                <frontend_type>image</frontend_type>
+                                <backend_model>adminhtml/system_config_backend_image</backend_model>
+                                <upload_dir config="system/filesystem/media" scope_info="1">m-connectRibbon</upload_dir>
+                                <base_url type="media" scope_info="1">m-connectRibbon</base_url>
+                                <sort_order>13</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                        </best_products_ribbon>
+                        
+                         <position_best_product>
+                                <label>Position</label>
+				<comment>position of product ribbon</comment>
+				<source_model>productribbon/ribbonposition</source_model>
+				<frontend_type>select</frontend_type>
+				<sort_order>14</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>   
+                        </position_best_product>
+                                                
+                        <style_for_best_Ribbon translate="label comment">
+                                <label>Style For Ribbon on Catalog List</label>
+                                <comment>Ex:float:left;margin:10px</comment>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>15</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                        </style_for_best_Ribbon>
+                        
+                        <style_for_best_Ribbon_view translate="label comment">
+                                <label>Style For Ribbon on Product View Page</label>
+                                <comment>Ex:float:left;margin:10px</comment>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>16</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                        </style_for_best_Ribbon_view>
+                        
+                        <number_for_display_ribbon_best_product translate="label comment">
+                                <label>Display Ribbon For No. of Product</label>
+                                <comment>In how many products you want to display Ribbon</comment>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>17</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                       </number_for_display_ribbon_best_product>
+                       
+                        <number_for_display_ribbon_best translate="label comment">
+                                <label>Display Ribbon For No. of Days</label>
+                                <comment>For how many days you want to display Ribbon</comment>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>18</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                        </number_for_display_ribbon_best>
+                        
+                        <display_on_best_product_label_on_view>                                
+                                <label>Display On Product View</label>
+				<comment>Show ribbon on product view page</comment>
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+				<frontend_type>select</frontend_type>
+				<sort_order>19</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>                             
+                       </display_on_best_product_label_on_view>
+
+                    </fields>
+                </mconnectbestproduct>
+                
+                
+                <mconnectsalesproduct translate="label">
+                    <label>Product on Sale</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>103</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <sales_products_module_enable_disable translate="label">
+				<label>Enable/Disable</label>
+				<comment>Display Ribbon on sales product</comment>
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+				<frontend_type>select</frontend_type>
+				<sort_order>21</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>
+			</sales_products_module_enable_disable>
+                                                 
+                        <sales_products_ribbon translate="label comment">
+                                <label>Icon For Sales Products</label>
+                                <comment>Allowed file types: jpeg, gif, png ,jpg.</comment>
+                                <frontend_type>image</frontend_type>
+                                <backend_model>adminhtml/system_config_backend_image</backend_model>
+                                <upload_dir config="system/filesystem/media" scope_info="1">m-connectRibbon</upload_dir>
+                                <base_url type="media" scope_info="1">m-connectRibbon</base_url>
+                                <sort_order>22</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                        </sales_products_ribbon>
+                        
+                          <position_sales_product>
+                                <label>Position</label>
+				<comment>position of product ribbon</comment>
+				<source_model>productribbon/ribbonposition</source_model>
+				<frontend_type>select</frontend_type>
+				<sort_order>23</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>   
+                        </position_sales_product>
+                        
+                        
+                       <!-- <logo_with_new_products translate="label">
+				<label>Display Icon With New Arrival Products</label>
+				<comment>Display Ribbon with new arrival products</comment>
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+				<frontend_type>select</frontend_type>
+				<sort_order>23</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>
+			</logo_with_new_products>
+                        
+                        <logo_with_best_products translate="label">
+				<label>Display Icon With Best seller Products</label>
+				<comment>Display Ribbon with best seller products</comment>
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+				<frontend_type>select</frontend_type>
+				<sort_order>24</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>
+			</logo_with_best_products>-->
+                        
+                         <style_for_sales_Ribbon translate="label comment">
+                                <label>Style For Ribbon on Catalog List</label>
+                                <comment>Ex:float:left;margin:10px</comment>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>25</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                        </style_for_sales_Ribbon>
+                        
+                        <style_for_sales_Ribbon_view translate="label comment">
+                                <label>Style For Ribbon on Product View Page</label>
+                                <comment>Ex:float:left;margin:10px</comment>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>26</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                        </style_for_sales_Ribbon_view>
+                        
+                        <display_on_sales_product_label_on_view>                                
+                                <label>Display On Product View</label>
+				<comment>Show ribbon on product view page</comment>
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+				<frontend_type>select</frontend_type>
+				<sort_order>27</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>                             
+                       </display_on_sales_product_label_on_view>
+
+                        
+                    </fields>
+                </mconnectsalesproduct>
+                
+                 <mconnectreviewproduct translate="label">
+                    <label>Most Reviewed Products</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>104</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        
+                        <review_products_module_enable_disable translate="label">
+				<label>Enable/Disable</label>
+				<comment>Display Ribbon on Best Reviewed product</comment>
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+				<frontend_type>select</frontend_type>
+				<sort_order>31</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>
+			</review_products_module_enable_disable>
+                        
+                        <review_products_ribbon translate="label comment">
+                                <label>Icon For Most Reviewed Products</label>
+                                <comment>Allowed file types: jpeg, gif, png ,jpg.</comment>
+                                <frontend_type>image</frontend_type>
+                                <backend_model>adminhtml/system_config_backend_image</backend_model>
+                                <upload_dir config="system/filesystem/media" scope_info="1">m-connectRibbon</upload_dir>
+                                <base_url type="media" scope_info="1">m-connectRibbon</base_url>
+                                <sort_order>32</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                        </review_products_ribbon>
+                        
+                         <position_reviewed_product>
+                                <label>Position</label>
+				<comment>position of product ribbon</comment>
+				<source_model>productribbon/ribbonposition</source_model>
+				<frontend_type>select</frontend_type>
+				<sort_order>33</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>   
+                        </position_reviewed_product>
+                        
+                        <style_for_review_Ribbon translate="label comment">
+                                <label>Style For Ribbon on Catalog List</label>
+                                <comment>Ex:float:left;margin:10px</comment>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>34</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                        </style_for_review_Ribbon>
+                        
+                        <style_for_review_Ribbon_view translate="label comment">
+                                <label>Style For Ribbon on Product View Page</label>
+                                <comment>Ex:float:left;margin:10px</comment>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>35</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                        </style_for_review_Ribbon_view>
+                        
+                         <number_for_display_ribbon_review_product translate="label comment">
+                                <label>Display Ribbon For No. of Product</label>
+                                <comment>In how many products you want to display Ribbon</comment>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>36</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                       </number_for_display_ribbon_review_product>
+                       
+                        <number_for_display_ribbon_review translate="label comment">
+                                <label>Display Ribbon For No. of Days</label>
+                                <comment>For how many days you want to display Ribbon</comment>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>37</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                        </number_for_display_ribbon_review>
+                        
+                        <display_on_sales_product_label_on_view>                                
+                                <label>Display On Product View</label>
+				<comment>Show ribbon on product view page</comment>
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+				<frontend_type>select</frontend_type>
+				<sort_order>38</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>                             
+                       </display_on_sales_product_label_on_view>
+                        
+                    </fields>
+                 </mconnectreviewproduct>
+             </groups>
+       
+        </productribbon>
+    </sections>
+</config>

@@ -1,0 +1,16 @@
+a:5:{i:0;s:660:"Error in file: "C:\xampp\htdocs\final\app\code\core\Mage\GiftMessage\sql\giftmessage_setup\install-1.6.0.0.php" - SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'gift_message' already exists, query was: CREATE TABLE `gift_message` (
+  `gift_message_id` int UNSIGNED NOT NULL auto_increment COMMENT 'GiftMessage Id' ,
+  `customer_id` int UNSIGNED NOT NULL default '0' COMMENT 'Customer id' ,
+  `sender` varchar(255) NULL COMMENT 'Sender' ,
+  `recipient` varchar(255) NULL COMMENT 'Recipient' ,
+  `message` text NULL COMMENT 'Message' ,
+  PRIMARY KEY (`gift_message_id`)
+) COMMENT='Gift Message' ENGINE=INNODB charset=utf8 COLLATE=utf8_general_ci";i:1;s:928:"#0 C:\xampp\htdocs\final\app\code\core\Mage\Core\Model\Resource\Setup.php(645): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 C:\xampp\htdocs\final\app\code\core\Mage\Core\Model\Resource\Setup.php(421): Mage_Core_Model_Resource_Setup->_modifyResourceDb('install', '', '1.6.0.0')
+#2 C:\xampp\htdocs\final\app\code\core\Mage\Core\Model\Resource\Setup.php(327): Mage_Core_Model_Resource_Setup->_installResourceDb('1.6.0.0')
+#3 C:\xampp\htdocs\final\app\code\core\Mage\Core\Model\Resource\Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#4 C:\xampp\htdocs\final\app\code\core\Mage\Core\Model\App.php(428): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#5 C:\xampp\htdocs\final\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Model_App->_initModules()
+#6 C:\xampp\htdocs\final\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#7 C:\xampp\htdocs\final\index.php(83): Mage::run('', 'store')
+#8 {main}";s:3:"url";s:128:"/final/index.php/install/wizard/config/?config%5Blocale%5D=sr_RS&config%5Btimezone%5D=Europe%2FBelgrade&config%5Bcurrency%5D=RSD";s:11:"script_name";s:16:"/final/index.php";s:4:"skin";s:7:"default";}

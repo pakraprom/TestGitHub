@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Mconnect_Productribbon>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Mconnect_Productribbon>
+    </modules>
+</config> 
